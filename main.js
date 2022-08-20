@@ -13,7 +13,7 @@
 		})
 	}, 500);
 
-	var autoPopTwelveth = setInterval(function() {
+	setInterval(function() {
 		var wrinkCount = 0,
 			wrinkEaten = 0,
 			wrinkIndex = 10; // value for 10 shinies test
