@@ -6,14 +6,12 @@
 	setInterval(function() {
 		Game.shimmers.forEach(function(shimmer)
 		{
-			if(shimmer.type == "golden")
+			if(shimmer.type == "golden" || shimmer.type == "reindeer")
 			{
 				shimmer.pop()
 			}
 		})
 	}, 500);
-
-	var autoReindeer = setInterval(function() { for (var h in Game.shimmers){if(Game.shimmers[h].type=="reindeer"){Game.shimmers[h].pop();}} }, 100);
 
 	var autoPopTwelveth = setInterval(function() {
 		var wrinkCount = 0,
@@ -32,8 +30,9 @@
 			}
 		}
 		// pop top wrinkler if 10 eating, unless all 12 are shiny
-		if (wrinkCount == 10 && wrinkIndex != wrinkCount) {
+		if (wrinkCount >= 10 && wrinkIndex != wrinkCount) {
 			Game.wrinklers[wrinkIndex].hp = 0;
 		}
-	}, 1000);
-});
+	}, 500);
+
+})();
