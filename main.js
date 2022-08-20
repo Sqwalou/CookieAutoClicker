@@ -1,4 +1,3 @@
-Game.LoadMod(
 (function() {
     'use strict';
 
