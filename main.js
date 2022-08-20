@@ -35,5 +35,5 @@
 		if (wrinkCount == 10 && wrinkIndex != wrinkCount) {
 			Game.wrinklers[wrinkIndex].hp = 0;
 		}
-	}, 500);
-})();
+	}, 1000);
+});
