@@ -1,1 +1,1 @@
-Game.LoadMod('https://raw.githubusercontent.com/Sqwalou/CookieAutoClicker/main/main.js');
+Game.LoadMod('https://sqwalou.github.io/CookieAutoClicker/main.js');
