@@ -6,6 +6,7 @@
 	setInterval(function() {
 		Game.shimmers.forEach(function(shimmer)
 		{
+			shimmer.wrath = 0;
 			if(shimmer.type == "golden" || shimmer.type == "reindeer")
 			{
 				shimmer.pop()
