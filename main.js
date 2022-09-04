@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
-
-    setInterval(function() { Game.ClickCookie(); }, 4);
+	'use strict';
+	
+	setInterval(function() { Game.ClickCookie(); }, 4);
 
 	setInterval(function() {
 		Game.shimmers.forEach(function(shimmer)
 		{
-			shimmer.wrath = 0;
+			shimmer.wrath = 0; //remove wrath cookies
 			if(shimmer.type == "golden" || shimmer.type == "reindeer")
 			{
 				shimmer.pop()
@@ -35,5 +35,11 @@
 			Game.wrinklers[wrinkIndex].hp = 0;
 		}
 	}, 500);
+	
+	setInterval(function() {
+		if (Game.TickerEffect && Game.TickerEffect.type == 'fortune') {
+			Game.tickerL.click();
+		}
+	}, 3000);
 
 })();
